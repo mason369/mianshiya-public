@@ -10,6 +10,10 @@ export interface UserSearchParams extends PageSearchParams {
  * 查询当前用户
  */
 export function getCurrentUser() {
+  return {
+    id: '1',
+    name: 'admin',
+  };
   return axios
     .post('/user/current')
     .then((res: any) => {
